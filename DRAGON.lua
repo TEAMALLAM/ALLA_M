@@ -1068,7 +1068,7 @@ end
 
 if text == 'تحديث السورس ℘' and DevSoFi(msg) then 
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/ TEAMALLAM/ALLA_M/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/ SRC_DRAGON/DRAGON/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,' ℘︙ تم تحديث السورس \n ℘︙ لديك اخر اصدار لسورس علام\n ℘︙ الاصدار » { v 1.5}')
 dofile('DRAGON.lua')  
 end
@@ -1366,7 +1366,7 @@ end
 database:srem(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n ℘︙ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'S0DRG')..')'
+usertext = '\n ℘︙ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'REDDEVIILL')..')'
 status  = '\n ℘︙ تم تنزيله من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -2315,7 +2315,7 @@ end
 return false
 end
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/TEAMALLAM/ALLA_M/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/SRC_DRAGON/DRAGON/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,' ℘︙ تم تحديث السورس \n ℘︙ لديك اخر اصدار لسورس علام\n ℘︙ الاصدار » { v 1.5}')
 dofile('DRAGON.lua')  
 end
@@ -3829,7 +3829,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevSoFi(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/TEAMALLAM/ALLA_M/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/SRC_DRAGON/files_Dragon/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -3867,7 +3867,7 @@ t = " ℘︙ الملف » "..file.."\n ℘︙ تم تعطيل ملف \n"
 else
 t = " ℘︙ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/TEAMALLAM/ALLA_M/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/SRC_DRAGON/files_Dragon/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
